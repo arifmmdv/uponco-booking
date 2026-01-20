@@ -2,7 +2,7 @@
 // Company Booking Page
 // ============================================================================
 
-import { BookingStepper } from '@/components/booking';
+import { BookingFlowContainer } from '@/components/booking';
 
 interface PageProps {
     params: Promise<{
@@ -13,7 +13,7 @@ interface PageProps {
 export default async function CompanyBookingPage({ params }: PageProps) {
     const { companySlug } = await params;
 
-    return <BookingStepper companySlug={companySlug} />;
+    return <BookingFlowContainer companySlug={companySlug} />;
 }
 
 export async function generateMetadata({ params }: PageProps) {
